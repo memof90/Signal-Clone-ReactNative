@@ -1,15 +1,19 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+// Components
 import ChatRoomItem from '../components/ChatRoomItem';
+// data
+import ChatRoomsData from '../assets/dummy-data/ChatRooms';
+
+const chatRoom1 = ChatRoomsData[0]
+const chatRoom2 = ChatRoomsData[2]
 
 
 export default function TabOneScreen() {
   return (
     <View style={styles.page}>
-      <ChatRoomItem />
-      <ChatRoomItem />
-      <ChatRoomItem />
-      <ChatRoomItem />
+      <ChatRoomItem chatRoom={chatRoom1}/>
+      <ChatRoomItem chatRoom={chatRoom2}/>
     </View>
   );
 }

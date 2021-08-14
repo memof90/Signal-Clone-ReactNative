@@ -4,7 +4,11 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 // Styles
 import styles from './styles';
 
-export default function ChatRoomItem() {
+export default function ChatRoomItem(props) {
+
+    const { chatRoom } = props;
+    console.log(chatRoom);
+
     return (
         <View style={styles.container}>
         <Image 
