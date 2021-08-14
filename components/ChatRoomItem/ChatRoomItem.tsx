@@ -13,9 +13,11 @@ export default function ChatRoomItem({chatRoom} : { chatRoom : any }) {
           source={{ uri: user.imageUri}}
           style={styles.image}
         />
-        <View style={styles.badgeContainer}>
-            <Text style={styles.badgeText}>4</Text>
-        </View>
+
+        {chatRoom.newMessages && <View style={styles.badgeContainer}>
+            <Text style={styles.badgeText}>{chatRoom.newMessages}</Text>
+        </View>}
+
         <View style={styles.rightContainer}>
           <View style={styles.row}>
             <Text style={styles.name}>{user.name}</Text>
