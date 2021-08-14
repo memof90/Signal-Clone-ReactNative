@@ -1,11 +1,19 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import Message from '../components/Message'
 
 export default function ChatRoomScreen() {
     return (
-        <View>
+        <View style={styles.page}>
            <Message />
         </View>
     )
 }
+
+// define your styles
+const styles = StyleSheet.create({
+    page: {
+        backgroundColor: "white",
+        flex: 1
+    }
+});
