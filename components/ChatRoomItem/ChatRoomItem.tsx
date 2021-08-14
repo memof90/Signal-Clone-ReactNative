@@ -13,7 +13,7 @@ export default function ChatRoomItem({chatRoom} : { chatRoom : any }) {
           source={{ uri: user.imageUri}}
           style={styles.image}
         />
-
+        
         {chatRoom.newMessages && <View style={styles.badgeContainer}>
             <Text style={styles.badgeText}>{chatRoom.newMessages}</Text>
         </View>}
