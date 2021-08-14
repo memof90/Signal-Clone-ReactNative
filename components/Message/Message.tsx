@@ -4,11 +4,12 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const blue = '#2E6DEF';
 const gray  = 'lightgrey';
+const myID = 'u1';
 
 // create a component
-const Message = () => {
-
-    const isMe = true;
+const Message = ({message} : { message : any}) => {
+    
+    const isMe = message.user.id === myID;
 
     return (
         <View style={[
@@ -16,7 +17,7 @@ const Message = () => {
             {backgroundColor: isMe ? gray : blue},
             {marginLeft: isMe ? 'auto' :  10}
         ]}>
-            <Text style={{color: isMe ? 'black' : 'white'}}>Message</Text>
+            <Text style={{color: isMe ? 'black' : 'white'}}>{message.content}</Text>
         </View>
     );
 };
