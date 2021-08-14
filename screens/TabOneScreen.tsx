@@ -6,7 +6,7 @@ import ChatRoomItem from '../components/ChatRoomItem';
 import ChatRoomsData from '../assets/dummy-data/ChatRooms';
 
 const chatRoom1 = ChatRoomsData[0]
-const chatRoom2 = ChatRoomsData[2]
+const chatRoom2 = ChatRoomsData[1]
 
 
 export default function TabOneScreen() {

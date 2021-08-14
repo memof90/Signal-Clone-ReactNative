@@ -4,15 +4,13 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 // Styles
 import styles from './styles';
 
-export default function ChatRoomItem(props) {
+export default function ChatRoomItem({chatRoom} : { chatRoom : any }) {
 
-    const { chatRoom } = props;
-    console.log(chatRoom);
-
+  const user = chatRoom.users[1];
     return (
         <View style={styles.container}>
         <Image 
-          source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png'}}
+          source={{ uri: user.imageUri}}
           style={styles.image}
         />
         <View style={styles.badgeContainer}>
@@ -20,10 +18,10 @@ export default function ChatRoomItem(props) {
         </View>
         <View style={styles.rightContainer}>
           <View style={styles.row}>
-            <Text style={styles.name}>Elon Musk</Text>
-            <Text style={styles.text}>11:11 AM</Text>
+            <Text style={styles.name}>{user.name}</Text>
+            <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
           </View>
-          <Text numberOfLines={1} style={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa magnam quibusdam atque velit laborum, totam cum fugit alias illum sapiente ea expedita quam corporis, deleniti illo minima quis suscipit?</Text>
+          <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>
         </View>
     </View>
     );
