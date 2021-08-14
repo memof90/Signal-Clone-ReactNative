@@ -9,6 +9,9 @@ export default function TabOneScreen() {
             source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png'}}
             style={styles.image}
           />
+          <View style={styles.badgeContainer}>
+              <Text style={styles.badgeText}>4</Text>
+          </View>
           <View style={styles.rightContainer}>
             <View style={styles.row}>
               <Text style={styles.name}>Elon Musk</Text>
@@ -32,6 +35,23 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginRight: 10
   }, 
+  badgeContainer: {
+    backgroundColor: '#2E6DEF',
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    left: 45,
+    top: 10
+  },
+  badgeText: {
+    color: '#fff',
+    fontSize: 12
+  },
   rightContainer: {
     flex: 1,
     justifyContent: 'center'
@@ -46,7 +66,7 @@ const styles = StyleSheet.create({
     marginBottom: 3
   },
   text: {
-    color: 'grey',
+    color: '#7F8281',
     fontSize: 14
   }
 })
