@@ -15,7 +15,8 @@ const Message = ({message} : { message : any}) => {
         <View style={[
             styles.container, 
             {backgroundColor: isMe ? gray : blue},
-            {marginLeft: isMe ? 'auto' :  10}
+            {marginLeft: isMe ? 'auto' :  10},
+            {marginRight: isMe ? 10 : 'auto'}
         ]}>
             <Text style={{color: isMe ? 'black' : 'white'}}>{message.content}</Text>
         </View>
@@ -31,6 +32,16 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         maxWidth: '75%'
     },
+    leftContainer:{
+        backgroundColor: blue,
+        marginLeft: 10,
+        marginRight: 'auto',
+    },
+    rightContainer:{
+        backgroundColor: gray,
+        marginLeft: 'auto',
+        marginRight: 10,
+    }
 });
 
 //make this component available to the app
