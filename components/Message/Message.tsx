@@ -13,10 +13,7 @@ const Message = ({message} : { message : any}) => {
 
     return (
         <View style={[
-            styles.container, 
-            {backgroundColor: isMe ? gray : blue},
-            {marginLeft: isMe ? 'auto' :  10},
-            {marginRight: isMe ? 10 : 'auto'}
+            styles.container, isMe ? styles.rightContainer : styles.leftContainer,
         ]}>
             <Text style={{color: isMe ? 'black' : 'white'}}>{message.content}</Text>
         </View>
@@ -26,7 +23,6 @@ const Message = ({message} : { message : any}) => {
 // define your styles
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#2E6DEF',
         padding: 10,
         margin: 10,
         borderRadius: 10,
