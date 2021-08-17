@@ -11,7 +11,9 @@ const MessageInput = () => {
         <View style={styles.root} >
             <View style={styles.inputContainer}>
                 <SimpleLineIcons name="emotsmile" size={24} color="#595959" style={styles.iconInput} />
-                <TextInput style={styles.input} />
+                <TextInput style={styles.input} 
+                placeholder="Signal message"
+                />
                 <SimpleLineIcons name="camera" size={24} color="#595959" style={styles.iconInput} />
                 <SimpleLineIcons name="microphone" size={24} color="#595959" style={styles.iconInput}/>
             </View>
