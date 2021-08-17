@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const blue = '#2E6DEF';
-const gray  = 'lightgrey';
+const gray  = '#EAEAEA';
 const myID = 'u1';
 
 // create a component
