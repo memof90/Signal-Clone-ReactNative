@@ -10,10 +10,10 @@ const MessageInput = () => {
     return (
         <View style={styles.root} >
             <View style={styles.inputContainer}>
-                <SimpleLineIcons name="emotsmile" size={24} color="grey" style={styles.iconInput} />
-                <TextInput style={styles.input}/>
-                <SimpleLineIcons name="camera" size={24} color="grey" style={styles.iconInput} />
-                <SimpleLineIcons name="microphone" size={24} color="grey" style={styles.iconInput}/>
+                <SimpleLineIcons name="emotsmile" size={24} color="#595959" style={styles.iconInput} />
+                <TextInput style={styles.input} />
+                <SimpleLineIcons name="camera" size={24} color="#595959" style={styles.iconInput} />
+                <SimpleLineIcons name="microphone" size={24} color="#595959" style={styles.iconInput}/>
             </View>
             <View style={styles.buttonContainer}>
                 <AntDesign name="plus" size={24} color="#fff"/>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         borderColor: '#dedede',
         alignItems: 'center',
         flexDirection: 'row',
-        padding: 10
+        padding: 5
     },
     iconInput: {
         marginHorizontal: 5
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 5
     },
     buttonContainer: {
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         backgroundColor: '#2E6DEF',
         borderRadius: 25,
         justifyContent: 'center',
