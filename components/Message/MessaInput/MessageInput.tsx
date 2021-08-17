@@ -3,18 +3,20 @@ import React from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 // MARK: ICONS
-import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { SimpleLineIcons, AntDesign } from '@expo/vector-icons'; 
 
 // create a component
 const MessageInput = () => {
     return (
         <View style={styles.root} >
             <View style={styles.inputContainer}>
-            <SimpleLineIcons name="emotsmile" size={24} color="grey" style={styles.iconInput} />
+                <SimpleLineIcons name="emotsmile" size={24} color="grey" style={styles.iconInput} />
                 <TextInput style={styles.input}/>
+                <SimpleLineIcons name="camera" size={24} color="grey" style={styles.iconInput} />
+                <SimpleLineIcons name="microphone" size={24} color="grey" style={styles.iconInput}/>
             </View>
             <View style={styles.buttonContainer}>
-                <Text style={styles.buttonText}>+</Text>
+                <AntDesign name="plus" size={24} color="#fff"/>
             </View>
         </View>
     );
