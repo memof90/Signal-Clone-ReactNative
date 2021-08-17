@@ -2,12 +2,16 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
+// MARK: ICONS
+import { SimpleLineIcons } from '@expo/vector-icons'; 
+
 // create a component
 const MessageInput = () => {
     return (
         <View style={styles.root} >
             <View style={styles.inputContainer}>
-                <TextInput />
+            <SimpleLineIcons name="emotsmile" size={24} color="grey" style={styles.iconInput} />
+                <TextInput style={styles.input}/>
             </View>
             <View style={styles.buttonContainer}>
                 <Text style={styles.buttonText}>+</Text>
@@ -27,7 +31,18 @@ const styles = StyleSheet.create({
         flex: 1,
         marginRight: 10,
         borderRadius: 25,
-        justifyContent: 'center'
+        borderWidth: 1,
+        borderColor: '#dedede',
+        alignItems: 'center',
+        flexDirection: 'row',
+        padding: 10
+    },
+    iconInput: {
+        marginHorizontal: 5
+    },
+    input: {
+        flex: 1,
+        marginHorizontal: 5
     },
     buttonContainer: {
         width: 50,
