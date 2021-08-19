@@ -1,5 +1,5 @@
 //import liraries
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 // MARK: ICONS
@@ -7,11 +7,16 @@ import { SimpleLineIcons, AntDesign } from '@expo/vector-icons';
 
 // create a component
 const MessageInput = () => {
+
+    const [message, setMessage] = useState('');
+
     return (
         <View style={styles.root} >
             <View style={styles.inputContainer}>
                 <SimpleLineIcons name="emotsmile" size={24} color="#595959" style={styles.iconInput} />
                 <TextInput style={styles.input} 
+                value={message}
+                onChangeText={setMessage}
                 placeholder="Signal message"
                 />
                 <SimpleLineIcons name="camera" size={24} color="#595959" style={styles.iconInput} />
