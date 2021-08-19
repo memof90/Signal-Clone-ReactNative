@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, Image, useWindowDimensions } from 'react-native
 import { SimpleLineIcons} from '@expo/vector-icons'; 
 
 // create a component
-const HomeHeader = ({props} : {props : any}) => {
+const ChatRoomHeader = ({props} : {props : any}) => {
 
     //SetUp Dimensions
     const { width } = useWindowDimensions();
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default HomeHeader;
+export default ChatRoomHeader;
