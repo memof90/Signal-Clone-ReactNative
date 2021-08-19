@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, useWindowDimensions } from 'react-native';
 
 // Icons
-import { SimpleLineIcons} from '@expo/vector-icons'; 
+import { Ionicons, MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'; 
 
 // create a component
 const MessageHeader = ({props} : {props : any}) => {
@@ -12,14 +12,15 @@ const MessageHeader = ({props} : {props : any}) => {
     const { width } = useWindowDimensions();
 
     return (
-        <View style={[styles.container, {width}]}>
+        <View style={[styles.container, {width: width - 25}]}>
             <Image 
             source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/jeff.jpeg'}}
             style={styles.image}
             />
-            <Text style={styles.text}>Signal</Text>
-            <SimpleLineIcons name="camera" size={24} color="#393939" style={styles.icon}/>
-            <SimpleLineIcons name="pencil" size={24} color="#393939" style={styles.icon}/>
+            <Text style={styles.text}>{props.children}</Text>
+            <FontAwesome name="video-camera" size={24} color="#393939" style={styles.icon}/>
+            <Ionicons name="md-call" size={24} color="#393939" style={styles.icon}/>
+            <MaterialCommunityIcons name="dots-vertical" size={24} color="#393939" style={styles.icon} />
         </View>
     );
 };
@@ -30,7 +31,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         padding: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginLeft: 25
   },
   image: {
     width: 30,
@@ -41,8 +43,7 @@ const styles = StyleSheet.create({
      fontSize: 20,
      fontWeight: 'bold',
      flex: 1,
-     textAlign: 'center',
-     marginLeft: 50
+     marginLeft: 10
   },
   icon: {
       marginHorizontal: 10

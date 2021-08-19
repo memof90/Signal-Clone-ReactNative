@@ -39,8 +39,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerTitle: props => <ChatRoomHeader props={props} /> }}/>
-      <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ headerTitle: props => <MessageHeader props={props}/>}}/>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerTitle: props => <ChatRoomHeader props={props} />}}/>
+      <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ headerTitle: props => <MessageHeader props={props}/> , headerBackTitleVisible: false}}/>
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
