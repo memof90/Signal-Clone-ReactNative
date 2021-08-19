@@ -1,6 +1,6 @@
 //import liraries
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 
 // MARK: ICONS
 import { SimpleLineIcons, AntDesign, Ionicons } from '@expo/vector-icons'; 
@@ -9,6 +9,24 @@ import { SimpleLineIcons, AntDesign, Ionicons } from '@expo/vector-icons';
 const MessageInput = () => {
 
     const [message, setMessage] = useState('');
+
+    // MARK: Function 
+    const sendMessage = () => {
+        console.warn("sending:", message)
+    //  Reset input
+        setMessage('');
+    }
+    const onPlusClick = () => {
+        console.warn("On Plus clicked")
+    }
+    const onPress = () => {
+        if (message) {
+            sendMessage();
+        } else {
+            onPlusClick();
+        }
+    }
+    
 
     return (
         <View style={styles.root} >
@@ -22,10 +40,14 @@ const MessageInput = () => {
                 <SimpleLineIcons name="camera" size={24} color="#595959" style={styles.iconInput} />
                 <SimpleLineIcons name="microphone" size={24} color="#595959" style={styles.iconInput}/>
             </View>
-            <View style={styles.buttonContainer}>
+            <Pressable
+             style={styles.buttonContainer}
+             onPress={onPress}
+             >
                 { message ? <Ionicons name="send" size={18} color="#fff" />
                 :  <AntDesign name="plus" size={24} color="#fff"/>}
-            </View>
+            </Pressable
+            >
         </View>
     );
 };
