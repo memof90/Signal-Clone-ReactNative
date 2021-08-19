@@ -6,7 +6,15 @@ import chatRoomData from '../assets/dummy-data/Chats';
 import Message from '../components/Message';
 import MessageInput from '../components/Message/MessaInput';
 
+// Navegation
+import { useRoute } from '@react-navigation/core';
+
 export default function ChatRoomScreen() {
+
+    // MARK: Setup navegation
+    const route = useRoute();
+    // console.warn("Display chatRoom", route.params?.id);
+
     return (
         <SafeAreaView style={styles.page}>
            <FlatList 

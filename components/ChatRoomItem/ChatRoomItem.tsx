@@ -17,7 +17,7 @@ export default function ChatRoomItem({chatRoom} : { chatRoom : any }) {
 
   // MARK: Fuctions
   const onPress = () => {
-    navigation.navigate('ChatRoom');
+    navigation.navigate('ChatRoom', {id: chatRoom.id});
   }
     return (
         <Pressable
