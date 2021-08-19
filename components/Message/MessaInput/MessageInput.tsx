@@ -1,6 +1,6 @@
 //import liraries
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable, KeyboardAvoidingView, Platform } from 'react-native';
 
 // MARK: ICONS
 import { SimpleLineIcons, AntDesign, Ionicons } from '@expo/vector-icons'; 
@@ -29,7 +29,10 @@ const MessageInput = () => {
     
 
     return (
-        <View style={styles.root} >
+        <KeyboardAvoidingView style={styles.root} 
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={100}
+        >
             <View style={styles.inputContainer}>
                 <SimpleLineIcons name="emotsmile" size={24} color="#595959" style={styles.iconInput} />
                 <TextInput style={styles.input} 
@@ -48,7 +51,7 @@ const MessageInput = () => {
                 :  <AntDesign name="plus" size={24} color="#fff"/>}
             </Pressable
             >
-        </View>
+        </KeyboardAvoidingView>
     );
 };
 
