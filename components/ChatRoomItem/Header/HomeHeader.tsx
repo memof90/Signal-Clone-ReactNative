@@ -1,14 +1,18 @@
 //import liraries
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, useWindowDimensions } from 'react-native';
 
 // Icons
 import { SimpleLineIcons} from '@expo/vector-icons'; 
 
 // create a component
 const HomeHeader = ({props} : {props : any}) => {
+
+    //SetUp Dimensions
+    const { width } = useWindowDimensions();
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {width}]}>
             <Image 
             source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/jeff.jpeg'}}
             style={styles.image}
@@ -24,7 +28,9 @@ const HomeHeader = ({props} : {props : any}) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        padding: 10,
+        alignItems: 'center'
   },
   image: {
     width: 30,
@@ -32,11 +38,16 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   text: {
-     fontSize: 20
+     fontSize: 20,
+     fontWeight: 'bold',
+     flex: 1,
+     textAlign: 'center',
+     marginLeft: 50
   },
   icon: {
-      marginHorizontal: 5
+      marginHorizontal: 10
   }
+  
 });
 
 //make this component available to the app
