@@ -15,6 +15,8 @@ import LinkingConfiguration from './LinkingConfiguration';
 //  Screens
 import ChatRoomScreen from '../screens/ChatRoomScreen';
 import HomeScreen from '../screens/HomeScreen';
+import HomeHeader from '../components/ChatRoomItem/Header';
+
 
 
 
@@ -35,7 +37,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerTitle: props => <HomeHeader props={props} /> }}/>
       <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ headerShown: true}}/>
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
