@@ -4,6 +4,7 @@
  */
 
 export type RootStackParamList = {
+  HomeScreen: undefined;
   ChatRoom: undefined;
   Root: undefined;
   NotFound: undefined;

@@ -10,11 +10,12 @@ import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 //  Screens
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import HomeScreen from '../screens/HomeScreen';
+
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -33,9 +34,9 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ headerShown: true}}/>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
