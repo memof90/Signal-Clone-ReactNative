@@ -18,9 +18,9 @@ const MessageHeader = ({props} : {props : any}) => {
             style={styles.image}
             />
             <Text style={styles.text}>{props.children}</Text>
-            <FontAwesome name="video-camera" size={24} color="#393939" style={styles.icon}/>
-            <Ionicons name="md-call" size={24} color="#393939" style={styles.icon}/>
-            <MaterialCommunityIcons name="dots-vertical" size={24} color="#393939" style={styles.icon} />
+            <FontAwesome name="video-camera" size={24} color="#E0E9FD" style={styles.icon}/>
+            <Ionicons name="md-call" size={24} color="#E0E9FD" style={styles.icon}/>
+            <MaterialCommunityIcons name="dots-vertical" size={24} color="#E0E9FD" style={styles.icon} />
         </View>
     );
 };
@@ -41,9 +41,9 @@ const styles = StyleSheet.create({
   },
   text: {
      fontSize: 20,
-     fontWeight: 'bold',
      flex: 1,
-     marginLeft: 10
+     marginLeft: 10,
+     color: "#fff"
   },
   icon: {
       marginHorizontal: 10

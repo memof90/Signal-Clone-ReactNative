@@ -7,13 +7,15 @@ import Message from '../components/Message';
 import MessageInput from '../components/Message/MessaInput';
 
 // Navegation
-import { useRoute } from '@react-navigation/core';
+import { useRoute, useNavigation } from '@react-navigation/core';
 
 export default function ChatRoomScreen() {
 
     // MARK: Setup navegation
     const route = useRoute();
+    const navigation = useNavigation();
     // console.warn("Display chatRoom", route.params?.id);
+    // navigation.setOptions({title: 'elion Musk'})
 
     return (
         <SafeAreaView style={styles.page}>
