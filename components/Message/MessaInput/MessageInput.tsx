@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 // MARK: ICONS
-import { SimpleLineIcons, AntDesign } from '@expo/vector-icons'; 
+import { SimpleLineIcons, AntDesign, Ionicons } from '@expo/vector-icons'; 
 
 // create a component
 const MessageInput = () => {
@@ -23,7 +23,8 @@ const MessageInput = () => {
                 <SimpleLineIcons name="microphone" size={24} color="#595959" style={styles.iconInput}/>
             </View>
             <View style={styles.buttonContainer}>
-                <AntDesign name="plus" size={24} color="#fff"/>
+                { message ? <Ionicons name="send" size={18} color="#fff" />
+                :  <AntDesign name="plus" size={24} color="#fff"/>}
             </View>
         </View>
     );
